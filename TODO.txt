@@ -14,5 +14,5 @@ Para a especificação de cada componente, ver `COMPONENTES.txt`
 Observação
 ---
 Caso sejam utilizadas aplicações de terceiros, as mesmas
-devem ser testadas.
+devem ser testadas e homologadas.
 
