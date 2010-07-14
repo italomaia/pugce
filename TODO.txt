@@ -1,0 +1,18 @@
+Pendências
+==========
+* Criar identidade visual do projeto
+* Criar cadastro de usuários
+* Adicionar aplicação de Wiki
+* Adicionar aplicação de Blog
+* Adicionar aplicação de notícias
+* Adicionar aplicação de cadastro de cursos.
+* Adicionar Feed
+* Integrar tudo
+
+Para a especificação de cada componente, ver `COMPONENTES.txt`
+
+Observação
+---
+Caso sejam utilizadas aplicações de terceiros, as mesmas
+devem ser testadas.
+

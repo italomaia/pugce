@@ -1,0 +1,49 @@
+(*) - indica que o usuário deve estar cadastrado e deve possuir permissões
+para executar a ação.
+
+BLOG
+====
+- (*) Deve permitir a adição de postagens com conteúdo multimídia.
+- (*) Deve permitir a edição de postagens. Deve ser mantido um histórico
+das mudanças entre edições.
+- Postagens devem possuir tags de assunto.
+- Cada postagem deve exibir o nome do autor, dia e hora da postagem,
+dia e hora da última edição, se existir, conteúdo da postagem e
+lista de tags.
+- Postagens devem permitir comentários através do `DisQus`.
+- O sistema deve permitir busca por palavra-chave e tags.
+- Deve estar integrado ao FEED.
+
+NOTICIAS
+========
+- (*) Deve permitir a postagem de notícias. 
+- (*) Deve permitir a edição de notícias (com histórico de mudanças).
+- Notícias devem possuir tags de assunto.
+- O sistema deve permitir busca por palavra-chave e tags.
+- Deve estar integrado ao FEED.
+- Cada notícia deve exibir o nome do autor, dia e hora da postagem,
+dia e hora da última edição, se existir, conteúdo da notícia e
+lista de tags.
+
+WIKI
+====
+- (*) Deve permitir adicionar páginas do wiki.
+- (*) Deve permitir editar páginas do wiki. Editores sem privilégios apenas 
+terão suas modificações aceitas após aprovação por membro com privilégios.
+Deve ser mantido um histórico das edições, sendo possível retornar uma 
+página de wiki a um estado anterior.
+- Páginas do wiki devem ser feitas utilizando alguma linguagem de marcação
+de textos adequadas a wiki.
+- Um wiki deve poder referenciar outra página de wiki no próprio site 
+fácilmente.
+- Deve haver um sistema de busca de conteúdo no wiki.
+- Deve haver um sistema de resolução de nomes para páginas do wiki com 
+o mesmo nome.
+
+CADASTRO
+========
+- O cadastro deve ser feito com nome e email.
+- O novo usuário deve receber um email de confirmação de cadastro onde
+ele poderá ativar sua conta.
+- Usuários cadastrados devem poder se logar no site através de link
+na página inicial.
