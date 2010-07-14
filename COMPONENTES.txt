@@ -32,6 +32,7 @@ WIKI
 terão suas modificações aceitas após aprovação por membro com privilégios.
 Deve ser mantido um histórico das edições, sendo possível retornar uma 
 página de wiki a um estado anterior.
+- Edições em páginas do wiki devem aceitar comentários.
 - Páginas do wiki devem ser feitas utilizando alguma linguagem de marcação
 de textos adequadas a wiki.
 - Um wiki deve poder referenciar outra página de wiki no próprio site 
