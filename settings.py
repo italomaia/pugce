@@ -1,7 +1,8 @@
-# Django settings for pugce project.
+# -*- coding:utf-8 -*-
 
 from os import path
 
+BIBLION_SECTIONS = []
 BASE_DIR = path.abspath(path.dirname(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG

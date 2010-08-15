@@ -7,5 +7,5 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns('django.views.generic.simple',
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     # (r'^admin/', include(admin.site.urls)),
-    (r'^$', 'direct_to_template', {'template':'index.xhtml'}, "pugce-index"),
+    (r'^$', 'direct_to_template', {'template':'index.html'}, "pugce-index"),
 )
