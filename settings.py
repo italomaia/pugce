@@ -83,6 +83,8 @@ ROOT_URLCONF = 'pugce.urls'
 
 TEMPLATE_DIRS = (
     path.join(BASE_DIR, 'templates'),
+    path.join(BASE_DIR, 'biblion/templates'),
+    path.join(BASE_DIR, 'wiki/templates'),
 )
 
 INSTALLED_APPS = (
@@ -93,5 +95,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
-    'biblion'
+    'pugce.biblion',
+    'pugce.wiki',
 )
