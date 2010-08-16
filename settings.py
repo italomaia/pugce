@@ -7,6 +7,13 @@ BASE_DIR = path.abspath(path.dirname(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+# WIKI PARAMS
+# Defines the duration of the soft editing lock on article, in seconds.
+WIKI_LOCK_DURATION = 15
+# Determines if the wiki will be for registered users only, or 
+# if it will allow anonimous users.
+WIKI_REQUIRES_LOGIN = False
+
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
@@ -75,4 +82,5 @@ INSTALLED_APPS = (
     # -- APPS --
     'pugce.biblion',
     'pugce.wiki',
+    'pugce.tagging',
 )
