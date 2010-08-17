@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load tagging_tags %}
 
 {% block content %}
     
@@ -12,6 +13,12 @@
     <div class="post_content">
         {{ post.content_html|safe }}
     </div>
+    <footer>
+        {% tags_for_object post as tag_list %}
+        <strong>Tags</strong>:
+        {% for tag in tag_list %}
+        {{ tag }} {% endfor %}
+    </footer>
 </div>
     
 {% endblock %}
