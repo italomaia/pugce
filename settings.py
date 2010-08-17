@@ -1,15 +1,20 @@
 # -*- coding:utf-8 -*-
 
 from os import path
+
 try:
     import config
     config = config.config
 except: 
-    config = {"SECRET_KEY":"chave secreta"}
+    config = {
+        "ADMINS":(),
+        "SECRET_KEY":"chave secreta"
+        "DEBUG":True,
+    }
 
 BIBLION_SECTIONS = []
 BASE_DIR = path.abspath(path.dirname(__file__))
-DEBUG = True
+DEBUG = config["DEBUG"]
 TEMPLATE_DEBUG = DEBUG
 
 # WIKI PARAMS
@@ -19,9 +24,8 @@ WIKI_LOCK_DURATION = 15
 # if it will allow anonimous users.
 WIKI_REQUIRES_LOGIN = False
 
-ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
-)
+# ('Your Name', 'your_email@domain.com'),
+ADMINS = config["ADMINS"]
 
 MANAGERS = ADMINS
 
@@ -36,15 +40,15 @@ if DEBUG:
             'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
         }
     }
-else: 
+else:
     DATABASES = {
         'default': {
-            'ENGINE': config.DB_ENGINE,
-            'NAME': config.DB_NAME,
-            'USER': config.DB_USER,
-            'PASSWORD': config.DB_PASSWD,
-            'HOST': config.DB_HOST,
-            'PORT': config.DB_PORT,
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': path.join(BASE_DIR, 'prod.sqlite'),
+            'USER': '',
+            'PASSWORD': '',
+            'HOST': '',
+            'PORT': '',
         }
     }
 
