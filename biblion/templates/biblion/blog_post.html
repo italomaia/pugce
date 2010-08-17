@@ -1,1 +1,17 @@
 {% extends "base.html" %}
+
+{% block content %}
+    
+<div class="blog_post">
+    <header>
+        <div class="post_info">
+            {{ post.published|date }} by {{ post.author }}
+        </div>
+        <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
+    </header>
+    <div class="post_content">
+        {{ post.content_html|safe }}
+    </div>
+</div>
+    
+{% endblock %}

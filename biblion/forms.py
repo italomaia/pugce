@@ -30,6 +30,11 @@ class AdminPostForm(forms.ModelForm):
             attrs = {"style": "width: 80%; height: 300px;"},
         )
     )
+    tags = forms.CharField(
+        widget = forms.TextInput(
+            attrs = {"style": "width: 30%;"},
+        )
+    )    
     publish = forms.BooleanField(
         required = False,
         help_text = u"Checking this will publish this articles on the site",

@@ -21,7 +21,7 @@ from biblion.managers import PostManager
 from biblion.settings import ALL_SECTION_NAME, SECTIONS
 from biblion.utils import can_tweet
 
-
+from tagging.fields import TagField
 
 def ig(L, i):
     for x in L:
@@ -40,6 +40,7 @@ class Post(models.Model):
     
     teaser_html = models.TextField(editable=False)
     content_html = models.TextField(editable=False)
+    tags = TagField("tags", help_text="Tags separadas por espaço.")
     
     tweet_text = models.CharField(max_length=140, editable=False)
     
