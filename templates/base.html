@@ -1,28 +1,193 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt">
+<!DOCTYPE html>
+<html lang="pt">
 <head>
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
-    <meta name="author" content="Italo Moreira Campelo Maia" />
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="pugce team" />
+    <title>PUG-CE - Python Users Group Ceará</title>
     
-    <!-- Framework CSS -->
-    <link media="screen, projection" rel="stylesheet" href="{{MEDIA_URL}}css/screen.css" type="text/css"  />
-    <link media="print" rel="stylesheet" href="{{MEDIA_URL}}css/print.css" type="text/css" />
-    <!--[if IE]>
-    <link media="screen, projection" rel="stylesheet" href="{{MEDIA_URL}}css/ie.css" type="text/css" />
-    <![endif]-->
-    
-    <title>PugCe</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/default.css" media="screen" >
+    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/layout.css" media="screen, print">    
 </head>
 
 <body>
-<div class="container">
-<div class="clear">
-<img src="{{MEDIA_URL}}img/logo-pugce-300x150.png" alt="logo pug-ce" />
-</div>
-{% block content %}
-{% endblock %}
-</div>
-</body>
 
+<div id="background">
+  <div id="wrapper">
+
+    <header id="header">
+
+          <hgroup class="logo">
+            <h1><a href="http://pug-ce.python.org.br" title="Voltar para a homepage"><img src="{{MEDIA_URL}}img/logo_pugce.png" alt="PUG-CE"></a></h1>
+            <h2>Comunidade Python CE</h2>
+
+          </hgroup>
+
+          <nav>
+            <h2 class="hidden">Navega&ccedil;&atilde;o</h2>
+
+            <div id="mainMenu">
+              <ul>
+                <li class="active"><a href="#"><span>In&iacute;cio</span></a></li>
+                <li><a href="about.html"><span>Sobre</span></a></li>
+                <li><a href="contact.html"><span>Contato</span></a></li>
+              </ul>
+            </div>
+
+            <h2 class="hidden">Navega&ccedil;&atilde;o r&aacute;pida</h2>
+
+            <ul id="quickNav">
+              <li class="home"><a href="#" title="In&iacute;cio"><span>Homepage</span></a></li>
+              <li class="map"><a href="#" title="Mapa do site"><span>Sitemap</span></a></li>
+              <li class="contact"><a href="#" title="Contato"><span>Contato</span></a></li>
+            </ul>
+
+            <h2 class="hidden">Idiomas</h2>
+
+            <ul id="lang">
+              <li class="pt"><a href="#" title="Portugu&ecirc;s"><span></span>PT-BR</a></li>
+              <li class="en"><a href="#" title="Ingl&ecirc;s"><span></span>EN</a></li>
+              <li class="es"><a href="#" title="Espanhol"><span></span>ES</a></li>
+            </ul>
+          </nav>
+
+          <form action="#">
+            <fieldset>
+              <legend>Busca</legend>
+              <input type="search" class="text" name="search" title="Encontre no site">
+              <input type="submit" class="submit" value="Busca">
+            </fieldset>
+          </form>
+
+        </header>
+
+      <section id="content">
+      {% block content %}
+        <h1>T&iacute;tulo padr&atilde;o com texto</h1>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in  voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur  sint occaecat cupidatat non proident, sunt in culpa qui officia  deserunt mollit anim id est laborum.</p>
+
+        <section class="floatBoxes">
+          <h1>Boxes para qualquer coisa</h1>
+
+          <article>
+            <a href="#">
+              <h1>Algo 1</h1>
+              <p>Some annotation goes here. It may sperad on a few lines.</p>
+            </a>
+          </article>
+
+          <article>
+            <a href="#">
+              <h1>Algo 2</h1>
+              <p>Some annotation goes here. It may sperad on a few lines.</p>
+            </a>            
+          </article>
+
+          <article class="last">
+            <a href="#">
+
+              <h1>Algo 3</h1>
+              <p>Some annotation goes here. It may sperad on a few lines.</p>
+            </a>
+          </article>
+        </section>
+
+        <section class="newsList">
+          <h1>Algumas not&iacute;cias:</h1>
+
+          <article>
+            <h1><a href="#">Headline #1</a></h1>
+            <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard  dummy text ever since the 1500s, when an unknown printer took a galley  of type and scrambled it to make a type specimen book. It has survived  not only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged. It was popularised in the 1960s with  the release of Letraset sheets containing Lorem Ipsum passages, and  more recently with desktop publishing software like Aldus PageMaker  including versions of Lorem Ipsum.</p>
+          </article>
+
+          <article>
+            <h1><a href="#">Headline #2</a></h1>
+
+            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in  voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur  sint occaecat cupidatat non proident, sunt in culpa qui officia  deserunt mollit anim id est laborum."</p>
+          </article>
+        </section>
+      {% endblock %}
+      </section>
+      {# FIM CONTENT #}
+
+      <aside id="sidebar">
+
+        <nav class="navMenu">
+          <h1>Categorias</h1>
+
+          <ul>
+            <li><a href="page1.html">Page 1</a></li>
+            <li>
+              <a href="page2.html">Page 2</a>
+              <ul>
+                <li><a href="subpage1.html">Subpage 1</a></li>
+                <li><a href="subpage2.html">Subpage 2</a></li>
+
+                <li><a href="subpage3.htmll">Subpage 3</a></li>
+                <li><a href="subpage4.html">Subpage 4</a></li>
+              </ul>
+            </li>
+            <li><a href="page3.html">Page 3</a></li>
+            <li><a href="page4.html">Page 4</a></li>
+          </ul>
+
+        </nav>
+          
+          <h1>Links ou Blogs</h1>
+          <a href="#">Sample Link #1</a><br>
+          <a href="#">Sample Link #2</a><br>
+          <a href="#">Sample Link #3</a><br>
+          <a href="#">Sample Link #4</a><br>
+          <a href="#">Sample Link #5</a><br>
+
+          <h1>Evento:</h1>
+
+          <address>
+            T&iacute;tulo: PyLestras<br>
+            Endere&ccedil;O: FA7<br>
+            Cidade: Fortaleza<br>
+
+            Fone: (85) 8885.5886<br>
+            Email: contato@pugce.com.br<br>
+          </address>
+
+        </aside>
+
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="width">
+        <p class="copyright">
+          <small>
+            &copy; <a href="http://pug-ce.python.org.br">PUG-CE</a> 2010, Todos direitos reservados.
+          </small>
+        </p>
+
+        <p class="HTML5">
+
+          <small>
+            Esse site foi feito em <abbr title="HTML 5">HTML 5</abbr> e projetado por <a href="http://pug-ce.python.org.br">Python Users Group CE</a>.
+          </small>
+        </p>
+
+        <div id="linkbuilding">
+          <ul>
+            <li><a href="#" title="SEO text 1">Link 1</a></li>
+            <li><a href="#" title="SEO text 2">Link 2</a></li>
+            <li><a href="#" title="SEO text 3">Link 3</a></li>
+            <li><a href="#" title="SEO text 4">Link 4</a></li>
+            <li><a href="#" title="SEO text 5">Link 5</a></li>
+            <li><a href="#" title="SEO text 6">Link 6</a></li>
+            <li><a href="#" title="SEO text 7">Link 7</a></li>
+          </ul>
+        </div>
+
+      </div>
+</footer>
+
+
+  </body>
 </html>

@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 from os import path
+import config
 
 BIBLION_SECTIONS = []
 BASE_DIR = path.abspath(path.dirname(__file__))
@@ -20,16 +21,28 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': path.join(BASE_DIR, 'dev.sqlite'),                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+            'NAME': path.join(BASE_DIR, 'dev.sqlite'),                      # Or path to database file if using sqlite3.
+            'USER': '',                      # Not used with sqlite3.
+            'PASSWORD': '',                  # Not used with sqlite3.
+            'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+            'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        }
     }
-}
+else: 
+    DATABASES = {
+        'default': {
+            'ENGINE': config.DB_ENGINE,
+            'NAME': config.DB_NAME,
+            'USER': config.DB_USER,
+            'PASSWORD': config.DB_PASSWD,
+            'HOST': config.DB_HOST,
+            'PORT': config.DB_PORT,
+        }
+    }
 
 TIME_ZONE = 'America/Fortaleza'
 
@@ -47,7 +60,7 @@ MEDIA_URL = '/media/'
 
 ADMIN_MEDIA_PREFIX = '/admin_media/'
 
-SECRET_KEY = 'chave_secreta'
+SECRET_KEY = config.SECRET_KEY
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (

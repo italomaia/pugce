@@ -1,0 +1,155 @@
+/*
+ * LAYOUT.CSS (Design and layout goes here)
+ *
+ * version: 0.1
+ * media: screen
+ *
+ * * */
+
+html               { margin: 0; padding: 0; color: white; background: #434343; }
+body               { margin: 0; padding: 0; }
+
+
+/* * * * * *  html 5 fix  * * * * * */
+section,
+article,
+header,
+footer,
+nav,
+aside,
+hgroup             { display: block; }
+
+
+/* * * * * *  layout  * * * * * */
+#background        { padding: 25px 0 0; background: #c7c7c7; }
+#wrapper           { width: 960px; margin: 0 auto; border: solid 8px #e1e1e1; border-bottom: none; color: black; background: white; }
+#wrapper:after     { display: block; clear: both; content: " "; }
+#header            { position: relative; width: 100%; height: 150px; }
+#content           { display: inline; float: left; width: 619px; margin: 0 0 15px 30px; }
+#sidebar           { display: inline; float: right; width: 248px; margin: 12px 30px 15px 0; }
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * *  HEADER AND FOOTER THINGS   * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* * * * * *  logo  * * * * * */
+#header .logo                      {  }
+#header .logo h1                   { position: absolute; top: 5px; left: 34px; margin: 0; }
+#header .logo a:focus              { background-color: transparent; }
+#header .logo h2                   { position: absolute; top: 70px; left: 350px; margin: 0; font-size: 1.25em; color: #aaa; }
+
+
+/* * * * * *  footer  * * * * * */
+#footer                            { width: 100%; font-size: 0.916em; color: #d5d5d5; background: url(../img/footer_rep.gif) 0 0 repeat-x; }
+#footer .width                     { position: relative; width: 976px; margin: 0 auto; background: url(../img/footer.png) 0 0 no-repeat; }
+#footer a                          { color: #d5d5d5; }
+#footer p                          { margin: 0; }
+#footer p small                    { font-size: 1em; }
+#footer p.copyright                { display: inline; margin: 35px 0 10px 8px; float: left; }
+#footer p.HTML5                      { display: inline; margin: 35px 8px 10px 0; float: right; }
+
+
+/* * * * *  linkbuilding links  * * * * * */
+#linkbuilding                      { clear: both; }
+#linkbuilding ul                   { margin: 0; padding: 1em 1em 2em; color: #aaa; text-align: center; }
+#linkbuilding ul li                { display: inline; margin: 0 3px; padding: 0; background: none; }
+#linkbuilding ul li a              { color: #aaa; text-decoration: none; }
+#linkbuilding ul li a:hover        { text-decoration: underline; }
+
+
+/* * * * * *  main menu  * * * * * */
+#mainMenu                          { position: absolute; bottom: 0; left: 0; width: 100%; background: #e5e5e5 url(../img/mmenu_rep.gif) 0 0 repeat-x; }
+#mainMenu ul                       { margin: 0; padding: 2px 0 0 29px; }
+#mainMenu ul li                    { display: inline; float: left; padding: 0; font-weight: bold; background: none; }
+#mainMenu ul li a                  { float: left; text-decoration: none; color: #595959; }
+#mainMenu ul li a span             { float: left; padding: 11px 17px 7px; }
+#mainMenu ul li a:hover,
+#mainMenu ul li a:focus,
+#mainMenu ul li.active a           { color: black; background: #fdfdfd url(../img/mmenu_left.gif) 0 0 no-repeat; }
+#mainMenu ul li a:hover span,
+#mainMenu ul li a:focus span,
+#mainMenu ul li.active a span      { background: url(../img/mmenu_right.gif) 100% 0 no-repeat; }
+
+
+/* * * * * *  quick navigation  * * * * * */
+ul#quickNav                        { position: absolute; top: 13px; right: 105px; margin: 0; }
+ul#quickNav li                     { display: inline; float: left; padding: 0; background: none; }
+ul#quickNav li a                   { float: left; width: 30px; height: 20px; background: url(../img/icons.png) 8px -15px no-repeat; }
+ul#quickNav li.map a               { background-position: -25px -15px; }
+ul#quickNav li.contact a           { background-position: -61px -15px; }
+ul#quickNav li a span              { position: absolute; left: -999em; }
+
+
+/* * * * * *  language mutations  * * * * * */
+ul#lang                            { position: absolute; top: 15px; right: 15px; margin: 0; }
+ul#lang li                         { display: inline; float: left; width: 20px; height: 15px; margin-left: 11px; padding: 0; font-size: 0.833em; text-align: center; background: none; }
+ul#lang li a                       { position: relative; display: block; width: 100%; height: 100%; overflow: hidden; }
+ul#lang li a span                  { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../img/icons.png) 0 0 no-repeat; }
+ul#lang li.en a span               { background-position: -35px 0; }
+ul#lang li.es a span               { background-position: -70px 0; }
+
+
+/* * * * * *  search form  * * * * * */
+#header form                       { position: absolute; bottom: 6px; right: 30px; }
+#header form fieldset              { margin: 0; padding: 0; border: none; background: none; }
+#header form fieldset legend       { display: none; }
+#header form fieldset input.text   { width: 11.333em; padding: 5px 5px 4px 35px; color: #8A8A8A; background: white url(../img/search.gif) 5px 4px no-repeat; }
+#header form fieldset input.submit { width: 5.4166em; height: 2.166em; padding: 0; margin-left: 2px; background:url(../img/search-bg.gif) }
+
+
+
+/* * * * * * * * * * * * * * * * * * * * */
+/* * * * * *  SIDEBAR THINGS   * * * * * */
+/* * * * * * * * * * * * * * * * * * * * */
+
+#sidebar h1                        { font-size: 1.5em; margin: 20px 0 5px; padding-bottom: 8px; background: url(../img/col_h2.gif) 0 100% no-repeat; }
+#sidebar p.banner                  { margin: 17px 0; text-align: center; }
+
+/* * * * * *  nav menu  * * * * * */
+.navMenu                           {  }
+.navMenu ul                        { margin: 0; }
+.navMenu ul li                     { padding: 0; background: none; }
+.navMenu ul li a                   { display: block; padding: 5px 15px 5px; text-decoration: none; font-weight: bold; border-bottom: solid 1px white;
+                                     color: #333; background: #eee; }
+.navMenu ul li ul li a             { padding-left: 40px; font-weight: normal; background-position: 28px 10px; }
+.navMenu ul li a:hover             { background-color: #ddd; }
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * *  MAIN CONTENT THINGS  * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * */
+
+/* * * * * *  floats  * * * * * */
+.floatBoxes                        { width: 100%; margin: 2em 0; }
+.floatBoxes:after                  { display: block; clear: both; content: " "; }
+.floatBoxes article                { display: inline; float: left; width: 186px; margin: 0 30px 0 0; background: #eee; }
+.floatBoxes article.last           { margin-right: 0; }
+.floatBoxes article a              { display: block; padding: 100px 10px 10px; color: black; text-decoration: none; }
+.floatBoxes article a:hover        { background: #ddd; }
+.floatBoxes article a h1           { margin: 0 0 10px; font-size: 1.166em; font-weight: bold; text-align: center; }
+.floatBoxes article a p            { margin: 0; }
+
+
+/* * * * * *  news list  * * * * * */
+.newsList article h1               { margin: 12px 0 3px; font-size: 1.166em; font-weight: bold; }
+.newsList article p                { margin-top: 0; }
+
+.floatBoxes h1,
+.newsList h1                       { font-size: 1.5em; }
+
+
+/* * * * * *  todo  * * * * * */
+.todo                              { position: fixed; top: 0; right: 0; width: 180px; padding: 8px 12px; font-size: 0.916em; opacity: 0.1;
+                                     border: solid 1px #e1c400; color: black; background: #fff7c1; }
+.todo:hover                        { opacity: 1; }
+.todo div                          { max-height: 200px; overflow: auto; }
+.todo h1,
+.todo h2                           { margin: 10px 0 0; font-size: 1em; line-height: 1.5em; font-weight: bold; }
+.todo h1                           { margin-top: 0; }
+.todo ol                           { margin-top: 0; margin-bottom: 0; }
+.todo footer                       { margin-top: 0; }
+
+
