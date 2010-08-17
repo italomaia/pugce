@@ -8,7 +8,7 @@ try:
 except: 
     config = {
         "ADMINS":(),
-        "SECRET_KEY":"chave secreta"
+        "SECRET_KEY":"chave secreta",
         "DEBUG":True,
     }
 
