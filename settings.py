@@ -1,7 +1,11 @@
 # -*- coding:utf-8 -*-
 
 from os import path
-import config
+try:
+    import config
+    config = config.config
+except: 
+    config = {"SECRET_KEY":"chave secreta"}
 
 BIBLION_SECTIONS = []
 BASE_DIR = path.abspath(path.dirname(__file__))
@@ -60,7 +64,7 @@ MEDIA_URL = '/media/'
 
 ADMIN_MEDIA_PREFIX = '/admin_media/'
 
-SECRET_KEY = config.SECRET_KEY
+SECRET_KEY = config["SECRET_KEY"]
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
