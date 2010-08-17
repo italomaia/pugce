@@ -9,7 +9,7 @@ except:
     config = {
         "ADMINS":(),
         "SECRET_KEY":"chave secreta",
-        "DEBUG":True,
+        "DEBUG":False,
     }
 
 BIBLION_SECTIONS = []
@@ -83,6 +83,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware'
 )
 
 ROOT_URLCONF = 'pugce.urls'
@@ -100,6 +101,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages', 
     'django.contrib.admin',
+    'django.contrib.flatpages',
     # -- APPS --
     'pugce.biblion',
     'pugce.wiki',
