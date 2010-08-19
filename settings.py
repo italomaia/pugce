@@ -5,7 +5,8 @@ from os import path
 try:
     import config
     config = config.config
-except: 
+except ImportError, e: 
+    print e
     config = {}
 
 BASE_DIR = path.abspath(path.dirname(__file__))
