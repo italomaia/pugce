@@ -10,9 +10,16 @@ except:
         "ADMINS":(),
         "SECRET_KEY":"chave secreta",
         "DEBUG":False,
+        "TWITTER_USERNAME":'',
+        "TWITTER_PASSWORD":'',
     }
 
-BIBLION_SECTIONS = []
+if config["TWITTER_USERNAME"] and config["TWITTER_PASSWORD"]:
+    global TWITTER_USERNAME, TWITTER_PASSWORD
+    TWITTER_USERNAME = config["TWITTER_USERNAME"]
+    TWITTER_PASSWORD = config["TWITTER_PASSWORD"]
+
+BIBLION_SECTIONS = [(1, "eventos"), (2, 'tutoriais'), (3, 'notícias')]
 BASE_DIR = path.abspath(path.dirname(__file__))
 DEBUG = config["DEBUG"]
 TEMPLATE_DEBUG = DEBUG
