@@ -7,6 +7,6 @@ except ImportError:
 
 
 def can_tweet():
-    creds_available = (hasattr(settings, "TWITTER_USERNAME") and
-                       hasattr(settings, "TWITTER_PASSWORD"))
+    creds_available = (getattr(settings, "TWITTER_USERNAME", False) and
+                       getattr(settings, "TWITTER_PASSWORD", False))
     return twitter and creds_available

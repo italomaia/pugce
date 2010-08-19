@@ -6,23 +6,16 @@ try:
     import config
     config = config.config
 except: 
-    config = {
-        "ADMINS":(),
-        "SECRET_KEY":"chave secreta",
-        "DEBUG":False,
-        "TWITTER_USERNAME":'',
-        "TWITTER_PASSWORD":'',
-    }
+    config = {}
 
-if config["TWITTER_USERNAME"] and config["TWITTER_PASSWORD"]:
-    global TWITTER_USERNAME, TWITTER_PASSWORD
-    TWITTER_USERNAME = config["TWITTER_USERNAME"]
-    TWITTER_PASSWORD = config["TWITTER_PASSWORD"]
+BASE_DIR = path.abspath(path.dirname(__file__))
+DEBUG = config.get("DEBUG", True)
+TEMPLATE_DEBUG = DEBUG
+
+TWITTER_USERNAME=config.get("TWITTER_USERNAME", None)
+TWITTER_PASSWORD=config.get("TWITTER_PASSWORD", None)
 
 BIBLION_SECTIONS = [(1, "eventos"), (2, 'tutoriais'), (3, 'notícias')]
-BASE_DIR = path.abspath(path.dirname(__file__))
-DEBUG = config["DEBUG"]
-TEMPLATE_DEBUG = DEBUG
 
 # WIKI PARAMS
 # Defines the duration of the soft editing lock on article, in seconds.
@@ -32,7 +25,7 @@ WIKI_LOCK_DURATION = 15
 WIKI_REQUIRES_LOGIN = False
 
 # ('Your Name', 'your_email@domain.com'),
-ADMINS = config["ADMINS"]
+ADMINS = config.get("ADMINS", ())
 
 MANAGERS = ADMINS
 
@@ -75,7 +68,7 @@ MEDIA_URL = '/media/'
 
 ADMIN_MEDIA_PREFIX = '/admin_media/'
 
-SECRET_KEY = config["SECRET_KEY"]
+SECRET_KEY = config.get("SECRET_KEY", "chave secreta")
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
