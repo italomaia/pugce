@@ -8,7 +8,7 @@
     
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/default.css" media="screen" >
-    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/layout.css" media="screen, print">    
+    <link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/layout.css" media="screen, print">
     <!--[if IE]>
 	  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -28,17 +28,17 @@
           </hgroup>
 
           <nav>
-            <h2 class="hidden">Navega&ccedil;&atilde;o</h2>
+            <h2 class="hidden">Navegação</h2>
 
             <div id="mainMenu">
               <ul>
-                <li><a href="/"><span>In&iacute;cio</span></a></li>
+                <li><a href="/"><span>Início</span></a></li>
                 <li><a href="/sobre/"><span>Sobre</span></a></li>
                 <li><a href="/sobre/contato/"><span>Contato</span></a></li>
               </ul>
             </div>
 
-            <h2 class="hidden">Navega&ccedil;&atilde;o r&aacute;pida</h2>
+            <h2 class="hidden">Navegação rápida</h2>
 
             <ul id="quickNav">
               <li class="home"><a href="#" title="In&iacute;cio"><span>Homepage</span></a></li>
@@ -49,8 +49,8 @@
             <h2 class="hidden">Idiomas</h2>
 
             <ul id="lang">
-              <li class="pt"><a href="#" title="Portugu&ecirc;s"><span></span>PT-BR</a></li>
-              <li class="en"><a href="#" title="Ingl&ecirc;s"><span></span>EN</a></li>
+              <li class="pt"><a href="#" title="Português"><span></span>PT-BR</a></li>
+              <li class="en"><a href="#" title="Inglês"><span></span>EN</a></li>
               <li class="es"><a href="#" title="Espanhol"><span></span>ES</a></li>
             </ul>
           </nav>
@@ -116,26 +116,26 @@
       {# FIM CONTENT #}
 
       <aside id="sidebar">
-
+        {% block side_column %} {% endblock %}
+            
         <nav class="navMenu">
-          <h1>Categorias</h1>
+            <h1>Categorias</h1>
 
-          <ul>
-            <li><a href="page1.html">Page 1</a></li>
-            <li>
-              <a href="page2.html">Page 2</a>
-              <ul>
-                <li><a href="subpage1.html">Subpage 1</a></li>
-                <li><a href="subpage2.html">Subpage 2</a></li>
+            <ul>
+              <li><a href="page1.html">Page 1</a></li>
+              <li>
+                <a href="page2.html">Page 2</a>
+                <ul>
+                  <li><a href="subpage1.html">Subpage 1</a></li>
+                  <li><a href="subpage2.html">Subpage 2</a></li>
 
-                <li><a href="subpage3.htmll">Subpage 3</a></li>
-                <li><a href="subpage4.html">Subpage 4</a></li>
-              </ul>
-            </li>
-            <li><a href="page3.html">Page 3</a></li>
-            <li><a href="page4.html">Page 4</a></li>
-          </ul>
-
+                  <li><a href="subpage3.htmll">Subpage 3</a></li>
+                  <li><a href="subpage4.html">Subpage 4</a></li>
+                </ul>
+              </li>
+              <li><a href="page3.html">Page 3</a></li>
+              <li><a href="page4.html">Page 4</a></li>
+            </ul>
         </nav>
           
           <h1>Links ou Blogs</h1>

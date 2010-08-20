@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load tagging_tags %}
+
+{% block side_column %}
+
+{% tag_cloud_for_model biblion.Post as model_tag_list with steps=10 min_count=1 distribution=log %}
+
+{% if model_tag_list|length %}
+    <h1>Tagcloud</h1>
+    <ul class="tagcloud" id="tags">
+    {% for tag_item in model_tag_list %}
+        <li class="tagsize_{{tag_item.font_size}}">
+            <a title="tag_{{ tag_item }}">{{ tag_item }}</a></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock %}
