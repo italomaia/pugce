@@ -10,7 +10,7 @@
     <ul class="tagcloud" id="tags">
     {% for tag_item in model_tag_list %}
         <li class="tagsize_{{tag_item.font_size}}">
-            <a title="tag_{{ tag_item }}">{{ tag_item }}</a></li>
+            <a href="{% url blog-tags tag_item %}" title="tag_{{ tag_item }}">{{ tag_item }}</a></li>
     {% endfor %}
     </ul>
 {% endif %}
