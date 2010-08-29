@@ -1,11 +1,13 @@
+# -*- coding:utf-8 -*-
 from datetime import datetime
 
 from django.core.urlresolvers import reverse
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 from django.template.loader import render_to_string
 from django.utils import simplejson as json
+from django.utils.http import urlquote
 
 from django.contrib.sites.models import Site
 
@@ -17,10 +19,32 @@ from django.views.generic import list_detail
 
 from tagging.models import Tag, TaggedItem
 
+def blog_search(request, keyword=None):
+    """
+    Search posts by looking for a keyword in their title.
+    """
+    get_keyword = request.GET.get('keyword', None)
+    
+    if get_keyword not in ('', None):
+        return HttpResponseRedirect(reverse('blog-search', args=[urlquote(get_keyword)]))
+    
+    if keyword in ('', None):
+        return HttpResponseRedirect(reverse('blog'))
+    
+    queryset = Post.objects.current()
+    queryset = queryset.filter(title__icontains=keyword)
+    
+    ctx = {
+        "queryset":queryset, 
+        "template_name":"biblion/blog_list.html",
+        "paginate_by":6
+    }
+    return list_detail.object_list(request, **ctx)
+
 def blog_by_tag(request, tagname):
     
     tag = get_object_or_404(Tag, name=tagname)
-    queryset = TaggedItem.objects.get_by_model(Post, tag)
+    queryset = TaggedItem.objects.get_by_model(Post.objets.current(), tag)
     
     ctx = {
         "queryset":queryset, 

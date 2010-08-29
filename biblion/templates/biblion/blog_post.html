@@ -16,8 +16,9 @@
     <footer>
         {% tags_for_object post as tag_list %}
         <strong>Tags</strong>:
-        {% for tag in tag_list %}
-        {{ tag }} {% endfor %}
+        {% for tag_item in tag_list %}
+        <a href="{% url blog-tags tag_item %}">
+        {{ tag }} </a>{% endfor %}
     </footer>
 </div>
     

@@ -22,7 +22,10 @@
     <header id="header">
 
           <hgroup class="logo">
-            <h1><a href="http://pug-ce.python.org.br" title="Voltar para a homepage"><img src="{{MEDIA_URL}}img/logo_pugce.png" alt="PUG-CE"></a></h1>
+            <h1>
+                <a href="http://pug-ce.python.org.br" title="Voltar para a homepage">
+                <img src="{{MEDIA_URL}}img/logo_pugce.png" alt="PUG-CE"></a>
+            </h1>
             <h2>Comunidade Python CE</h2>
 
           </hgroup>
@@ -40,11 +43,11 @@
 
           </nav>
 
-          <form action="#">
+          <form action="{% url blog-search %}">
             <fieldset>
               <legend>Busca</legend>
-              <input type="search" class="text" name="search" title="Encontre no site">
-              <input type="submit" class="submit" value="Busca">
+              <input type="search" class="text" name="keyword" title="Encontre no site" />
+              <input type="submit" class="submit" value="Busca" />
             </fieldset>
           </form>
 
@@ -123,7 +126,7 @@
             </ul>
         </nav>
           
-          <h1>Links ou Blogs</h1>
+          <h1>Conheça Também</h1>
           <a href="http://www.python.org.br/" title="Python Brasil">Python Brasil</a><br>
           <a href="http://associacao.python.org.br/" title="Associação Python Brasil">APyB</a><br>
           <a href="http://groups.google.com.br/group/pug-ce" title="Lista de emails do grupo">PugCe no Google Group</a><br>
