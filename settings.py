@@ -25,6 +25,8 @@ WIKI_LOCK_DURATION = 15
 # if it will allow anonimous users.
 WIKI_REQUIRES_LOGIN = False
 
+FORCE_LOWERCASE_TAGS = True
+
 # ('Your Name', 'your_email@domain.com'),
 ADMINS = config.get("ADMINS", ())
 

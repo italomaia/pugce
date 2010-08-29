@@ -13,14 +13,32 @@ from biblion.exceptions import InvalidSection
 from biblion.models import Post, FeedHit
 from biblion.settings import ALL_SECTION_NAME
 
+from django.views.generic import list_detail
+
+from tagging.models import Tag, TaggedItem
+
+def blog_by_tag(request, tagname):
+    
+    tag = get_object_or_404(Tag, name=tagname)
+    queryset = TaggedItem.objects.get_by_model(Post, tag)
+    
+    ctx = {
+        "queryset":queryset, 
+        "template_name":"biblion/blog_list.html",
+        "paginate_by":6
+    }
+    return list_detail.object_list(request, **ctx)
 
 def blog_index(request):
     
-    posts = Post.objects.current()
+    queryset = Post.objects.current()
     
-    return render_to_response("biblion/blog_list.html", {
-        "posts": posts,
-    }, context_instance=RequestContext(request))
+    ctx = {
+        "queryset":queryset, 
+        "template_name":"biblion/blog_list.html",
+        "paginate_by":6
+    }
+    return list_detail.object_list(request, **ctx)
 
 
 def blog_section_list(request, section):
