@@ -44,7 +44,7 @@ def blog_search(request, keyword=None):
 def blog_by_tag(request, tagname):
     
     tag = get_object_or_404(Tag, name=tagname)
-    queryset = TaggedItem.objects.get_by_model(Post.objets.current(), tag)
+    queryset = TaggedItem.objects.get_by_model(Post.objects.current(), tag)
     
     ctx = {
         "queryset":queryset, 
