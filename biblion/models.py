@@ -21,7 +21,6 @@ from biblion.managers import PostManager
 from biblion.settings import ALL_SECTION_NAME, SECTIONS
 from biblion.utils import can_tweet
 
-import tagging
 from tagging.fields import TagField
 
 def ig(L, i):

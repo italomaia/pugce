@@ -16,7 +16,7 @@ TEMPLATE_DEBUG = DEBUG
 TWITTER_USERNAME=config.get("TWITTER_USERNAME", None)
 TWITTER_PASSWORD=config.get("TWITTER_PASSWORD", None)
 
-BIBLION_SECTIONS = [(1, "eventos"), (2, 'tutoriais'), (3, 'notícias')]
+BIBLION_SECTIONS = [(1, "eventos"), (2, 'tutoriais'), (3, 'notícias'), (4, 'cursos')]
 
 # WIKI PARAMS
 # Defines the duration of the soft editing lock on article, in seconds.

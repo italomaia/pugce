@@ -105,46 +105,27 @@
 
       <aside id="sidebar">
         {% block side_column %} {% endblock %}
-            
-        <nav class="navMenu">
-            <h1>Categorias</h1>
-
-            <ul>
-              <li><a href="page1.html">Page 1</a></li>
-              <li>
-                <a href="page2.html">Page 2</a>
-                <ul>
-                  <li><a href="subpage1.html">Subpage 1</a></li>
-                  <li><a href="subpage2.html">Subpage 2</a></li>
-
-                  <li><a href="subpage3.htmll">Subpage 3</a></li>
-                  <li><a href="subpage4.html">Subpage 4</a></li>
-                </ul>
-              </li>
-              <li><a href="page3.html">Page 3</a></li>
-              <li><a href="page4.html">Page 4</a></li>
-            </ul>
-        </nav>
-          
+        
           <h1>Conheça Também</h1>
           <a href="http://www.python.org.br/" title="Python Brasil">Python Brasil</a><br>
           <a href="http://associacao.python.org.br/" title="Associação Python Brasil">APyB</a><br>
           <a href="http://groups.google.com.br/group/pug-ce" title="Lista de emails do grupo">PugCe no Google Group</a><br>
           <a href="http://www.argohost.net/" title="Soluções em Hospedagem">ArgoHost</a><br>
           
-          <h1>Evento:</h1>
+          {% comment %}
+              <h1>Evento:</h1>
 
-          <address>
-            Título: PyLestras<br />
-            Endereço: FA7<br />
-            Data: 11/09/2010 <br />
-            Cidade: Fortaleza<br />
-            
+              <address>
+                Título: PyLestras<br />
+                Endereço: FA7<br />
+                Data: 11/09/2010 <br />
+                Cidade: Fortaleza<br />
+                
 
-            Fone: (85) -- -- --<br>
-            Email: pugce.org@gmail.com<br>
-          </address>
-
+                Fone: (85) -- -- --<br>
+                Email: pugce.org@gmail.com<br>
+              </address>
+          {% endcomment %}
         </aside>
 
       </div>
